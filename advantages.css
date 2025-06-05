@@ -1,0 +1,92 @@
+.advantages {
+    padding: 80px 60px;
+    background-color: #000;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Заголовок */
+.section-title {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.section-title .subtitle {
+    font-size: 14px;
+    opacity: 0.85;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+/* Сетка карточек */
+.adv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Карточка */
+.adv-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    text-align: left;
+    position: relative;
+    color: #2a542a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+}
+
+.adv-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.adv-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.adv-number {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2a542a;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .adv-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .adv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages {
+        padding: 60px 20px;
+    }
+}

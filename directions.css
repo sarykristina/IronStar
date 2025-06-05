@@ -1,0 +1,115 @@
+/* Направления */
+.directions-section {
+    padding: 80px 0;
+    background-color: var(--darker-color);
+    position: relative;
+}
+
+.directions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    position: relative;
+}
+
+.direction-card {
+    background-color: var(--dark-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.direction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(100, 161, 102, 0.3);
+    background-color: rgba(100, 161, 102, 0.05);
+}
+
+.direction-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.direction-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.direction-card:hover .direction-image img {
+    transform: scale(1.05);
+}
+
+.direction-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.direction-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.direction-card:hover .direction-content h3 {
+    color: var(--primary-color);
+}
+
+.direction-content p {
+    color: var(--light-gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.direction-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.direction-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .directions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .direction-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .direction-content {
+        padding: 20px;
+    }
+
+    .direction-content h3 {
+        font-size: 1.3rem;
+    }
+}
